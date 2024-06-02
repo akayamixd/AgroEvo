@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог техники AgroEvo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script src="js/cart-script.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="container-buttons">
+            <button class="header-button" id="order-button" onclick="navigateTo('requestAgroEvo.html')">
+                <div style="width: 100%; background-color: transparent; position: absolute; margin-top: 1vh; min-width: 120px; min-height: auto;">Оформить заявку</div>
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                <lord-icon id = "order"
+                    src="https://cdn.lordicon.com/wzwygmng.json"
+                    trigger="hover"
+                    style="width:42px;height:42px; margin-top: -0.8vh; margin-left: 15.3vh;">
+                </lord-icon>
+            </button>
+            <div class="agroevologo">
+                <img style="width: 70%;" src="pics/AgroEvoLogo2_ed.png" alt="Логотип AgroEvo">
+            </div>
+            <button class="header-button" onclick="navigateTo('mainAgroEvo.html')">Главная</button>
+            <button class="header-button" onclick="navigateTo('techAgroEvo.html')">Техника</button>
+            <button class="header-button" onclick="navigateTo('aboutAgroEvo.html')">О нас</button>
+            <button class="header-button" onclick="scrollToElement('contacts-scroll');">Контакты</button>
+            <button class="header-button" onclick="scrollToElement('callback-main');">Заказать звонок
+                <img src="pics/phone.png" alt = "Иконка трубки">
+            </button>
+        </div>
+    </nav>
+</header>
+  <div style="padding: 6vh;"></div>
+  <main>
+
+
+    <section class="tech-hero">
+      <img src="pics/techHeroCut.jpg">
+      <h1>Каталог техники</h1>
+      <p>Каталог техники<p>
+    </section>
+
+    <section class="tech-filter">
+
+      <div class="tech-filter-box">
+
+        <div class="tech-switch">
+          <h1 style="margin-right: 1vh;">Лизинг</h1>
+          <input type="checkbox" id="switch">
+          <label class="switch-label" for="switch"></label>
+          <h1 style="margin-left: 2vh;">Покупка</h1>
+        </div>
+
+        <div class="tech-card-filter">
+          <label for="filter" style="margin-bottom: 1vh;">Тип техники</label>
+          <select class="filter-select" id="filter">
+              <option value="all">Все</option>
+              <option value="tractor">Трактор</option>
+              <option value="combine">Комбайн</option>
+              <option value="sprinkler">Опрыскиватель</option>
+              <option value="plough">Плуг</option>
+              <option value="baler">Пресс-подборщик</option>
+          </select>
+        </div>
+
+        <div class="tech-icons">
+
+          <button class="icon-button" data-logo="claas">
+            <img src="logos/claas_ed.png">
+          </button>
+
+          <button class="icon-button" data-logo="fendt">
+            <img src="logos/fendt_ed.png">
+          </button>
+
+          <button class="icon-button" data-logo="deere">
+            <img src="logos/deere_ed.png">
+          </button>
+
+          <button class="icon-button" data-logo="holland">
+            <img src="logos/holland_ed.png">
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="tech-main-cards">
+      <div class="tech-main-card-container">
+        <div class="tech-main-card" data-category="tractor leasing purchase fendt">
+          <div class="tech-card-pic">
+            <img src="pics/fendt_vario-11.png" style="transform: scaleX(-1); margin-left: -2vh;">
+          </div>
+          <div class="tech-main-card-text">
+
+            <div class="tech1-3card">
+              <h1>FENDT 1050 Vario</h1>
+              <p>Лизинг ● Покупка</p>
+            </div>
+
+            <div class="tech2-3card">
+              <h2>Мощный и высокопроизводительный трактор с бесступенчатой трансмиссией Vario, обеспечивающей плавное и эффективное управление.</h2>
+            </div>
+
+            <div class="tech3-3card">
+              <button class="techbuttonmore" onclick="navigateTo('fendt-1050.html')">Подробнее</button>
+              <button class="techbuttonreq" data-product-id="1" data-product-name="FENDT 1050 Vario" data-product-leasing-price="133000" data-product-purchase-price="12000000" data-product-image="fendt_vario-11.png">
+                Добавить в заявку
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="tech-main-card" data-category="tractor leasing deere">
+          <div class="tech-card-pic">
+            <img src="pics/johndeere_8rt.png" style="height: 100%;">
+          </div>
+          <div class="tech-main-card-text">
+            <div class="tech1-3card">
+              <h1>John Deere 8RT</h1>
+              <p>Лизинг</p>
+            </div>
+
+            <div class="tech2-3card">
+              <h2>Маневренный гусеничный трактор с передовыми технологиями, обеспечивающий высокую производительность и эффективность в сложных полевых условиях.</h2>
+            </div>
+
+            <div class="tech3-3card">
+              <button class="techbuttonmore">Подробнее</button>
+              <button class="techbuttonreq" data-product-id="3" data-product-name="John Deere 8RT" data-product-leasing-price="110000" data-product-image="johndeere_8rt.png">
+                Добавить в заявку
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-main-card" data-category="plough purchase holland">
+          <div class="tech-card-pic">
+            <img src="pics/holland-6h.png" style="height: 100%;">
+          </div>
+          <div class="tech-main-card-text">
+            <div class="tech1-3card">
+              <h1>New Holland PX V OL 6H</h1>
+              <p>Покупка</p>
+            </div>
+
+            <div class="tech2-3card">
+              <h2>Эффективный прицепной плуг, отличающийся надежностью, простотой управления и обеспечивающий качественную уборку урожая.</h2>
+            </div>
+
+            <div class="tech3-3card">
+              <button class="techbuttonmore">Подробнее</button>
+              <button class="techbuttonreq" data-product-id="5" data-product-name="New Holland PX V OL 6H" data-product-purchase-price="1200000" data-product-image="holland-6h.png">
+                Добавить в заявку
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-main-card" data-category="combine leasing purchase claas">
+          <div class="tech-card-pic">
+            <img src="pics/claas_lexion8900-12.png" style="transform: scaleX(-1); margin-left: 3vh; margin-top: 6vh; height: 125%;">
+          </div>
+          <div class="tech-main-card-text">
+            <div class="tech1-3card">
+              <h1>CLAAS LEXION 8900</h1>
+              <p>Лизинг ● Покупка</p>
+            </div>
+
+            <div class="tech2-3card">
+              <h2>Мощный зерноуборочный комбайн с интеллектуальной системой управления, обеспечивающей максимальную эффективность уборки урожая.</h2>
+            </div>
+
+            <div class="tech3-3card">
+              <button class="techbuttonmore">Подробнее</button>
+              <button class="techbuttonreq" data-product-id="2" data-product-name="CLAAS LEXION 8900" data-product-leasing-price="250000" data-product-purchase-price="19000000" data-product-image="claas_lexion8900-12.png">
+                Добавить в заявку
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-main-card" data-category="sprinkler leasing purchase deere">
+          <div class="tech-card-pic">
+            <img src="pics/johndeere_616r.png" style="height: 100%;">
+          </div>
+          <div class="tech-main-card-text">
+            <div class="tech1-3card">
+              <h1>John Deere 616R</h1>
+              <p>Лизинг ● Покупка</p>
+            </div>
+
+            <div class="tech2-3card">
+              <h2>Компактный и высокопроизводительный самоходный опрыскиватель, оснащенный точными системами контроля и распределения рабочих жидкостей.</h2>
+            </div>
+
+            <div class="tech3-3card">
+              <button class="techbuttonmore">Подробнее</button>
+              <button class="techbuttonreq" data-product-id="4" data-product-name="John Deere 616R" data-product-purchase-price="8000000" data-product-leasing-price="106000" data-product-image="johndeere_616r.png">
+                Добавить в заявку
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-main-card" data-category="baler leasing purchase holland">
+          <div class="tech-card-pic">
+            <img src="pics/holland-870.png" style="height: 80%;">
+          </div>
+          <div class="tech-main-card-text">
+            <div class="tech1-3card">
+              <h1>New Holland BigBaler 870 Plus Cropcutter™</h1>
+              <p>Лизинг ● Покупка</p>
+            </div>
+
+            <div class="tech2-3card">
+              <h2 style="margin-top: 7vh;">Рулонный пресс-подборщик, обеспечивающий качественное прессование различных культур.</h2>
+            </div>
+
+            <div class="tech3-3card">
+              <button class="techbuttonmore">Подробнее</button>
+              <button class="techbuttonreq" data-product-id="6" data-product-name="New Holland BigBaler 870 Plus Cropcutter™" data-product-leasing-price="90000" data-product-purchase-price="6000000" data-product-image="holland-870.png">
+                Добавить в заявку
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3 class="footer-title">О нас</h3>
+        <p class="footer-text">Мы предоставляем лучшие сельскохозяйственные машины и оборудование с гарантией качества и надежности.</p>
+        <a href="aboutAgroEvo.html" class="footer-link">Узнать больше</a>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-title">Контакты</h3>
+        <p class="footer-text">г.Москва, ул.Правды, 26<br>+7 (495) 455-55-55 (доб.3)<br>+7 (495) 544-44-44</p>
+        <button style="all: unset; cursor: pointer; font-size: 1vw; font-family: 'Roboto', sans-serif; color: #3f6b9e;" onclick="scrollToElement('contacts-scroll');">Подробнее</button>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-title">Следите за нами в соцсетях:</h3>
+        <div class="footer-social"> 
+            <a href="https://vk.com" class="footer-social-link"> 
+                <img src="pics/VK-icon.png" alt="VK" width="30" height="30"> 
+            </a> 
+            <a href="https://youtube.com" class="footer-social-link"> 
+                <img src="pics/YouTube-icon.png" alt="YouTube" width="30" height="30"> 
+            </a> 
+            <a href="https://telegram.org" class="footer-social-link"> 
+                <img src="pics/Telegram-icon.png" alt="Telegram" width="30" height="30"> 
+            </a> 
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2024 AgroEvo. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>

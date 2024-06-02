@@ -1,0 +1,1480 @@
+@font-face {
+    font-family: 'FormatSans';
+    src: url('fonts/oc-format-sans-3.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype'),
+         url('fonts/Roboto-Bold.ttf') format('truetype'),
+         url('fonts/Roboto-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'OpenSans';
+    src:
+        url('fonts/OpenSans-Regular.ttf') format('truetype'),
+        url('fonts/OpenSans-Italic.ttf') format('truetype'),
+        url('fonts/OpenSans-Bold.ttf') format('truetype'),
+        url('fonts/OpenSans-BoldItalic.ttf') format('truetype');
+}
+
+html {
+    min-width: 1000px;
+}
+
+body {
+    background-color: #43ac7A; /*#43ac79bd*/
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+header {
+    background-color: #43AC7A;
+    padding: 1vh;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+    border-bottom: 4px solid #F78760;
+}
+
+.container-buttons {
+    display: flex;
+    margin-left: -15vh;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    height: 10vh;
+    width: 100%;
+}
+
+.agroevologo {
+    position: absolute;
+    margin-left: -68vw;
+    width: 10vw;
+    background-color: rgb(255, 253, 225);
+    border-radius: 10vw;
+}
+
+/* Стили для кнопок */
+.header-button {
+    display: inline-block;
+    width: 10%;
+    height: 50%;
+    padding: 1vh 2vh;
+    font-size: 1.8vh;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #006A38;
+    background-color: #FBE188;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-items: center;
+    font-family: Roboto;
+}
+
+.header-button:last-child {
+    position: absolute; 
+    margin-left: 127vh;
+    height: 50%;
+    width: 12%;
+    text-align: left;
+}
+
+.header-button:first-child {
+    text-align: left;
+    position: absolute; 
+    margin-left: 180vh;
+    height: 50%;
+    width: 12%;
+}
+
+.header-button:last-child img {
+    position: absolute;
+    width: 25%;
+    height: auto;
+    margin-top: -1.57vh;
+    margin-left: 0.6vh;
+}
+  
+  /* Стили для анимации при наведении */
+.header-button:hover {
+    background-color: #f9d65e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+  
+.header-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.1s;
+}
+
+.hero {
+    position: relative;
+    height: 104vh;
+    width: 100%;
+    background-image: url('traktorVpole.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero img {
+    display: none;
+}
+
+.hero-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(130deg, rgba(25,25,25,1) 0%, rgba(255,255,255,0) 60%);
+    opacity: 0.6;
+    z-index: 1;
+}
+/*156*/
+
+/*
+            <button class = "callback-button" style="margin-top: 70vh; margin-left: 6vh;">Заказать звонок</button>
+.callback-button {
+    width: 20%;
+    height: 8%;
+    opacity: 1;
+    border-radius: 100px;
+    background-color: transparent;
+    border: 8% #1B2B28 solid;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}*/
+
+.callback-button:hover {
+background-color: #8DB5CE;
+}
+
+.hero-text {
+    position: absolute; /* Позиционирование для точного размещения */
+    top: 2vh; /* Отступ сверху */
+    left: 4vh; /* Отступ слева */
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 9vh; /* Размер шрифта */
+    line-height: 0.8; /* Межстрочное расстояние */
+    margin: 0; /* Убрать отступы */
+    color: #ffeb36;
+}
+
+.hero-text h1 span {
+    font-size: 16vh;
+    background-image: linear-gradient(90deg, #33f3a6 0%, rgb(122, 250, 80) 41%, rgba(221,255,0,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 5px 0;
+    line-height: 1.05; /* Межстрочное расстояние */ 
+}
+
+#changing-word {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: changeWord 6s linear infinite;
+}
+
+@keyframes changeWord {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    16.67% {
+        width: 100%;
+        opacity: 1;
+    }
+    83.33% {
+        width: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+/* #################################### MAIN CARDS */
+
+.main-card {
+    position: relative;
+    width: 90vh; 
+    height: 65vh; 
+    background: #FBE188; 
+    border-radius: 10vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 0;
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: center;
+    font-family: OpenSans;
+    font-size: 1.8vh;
+}
+
+.main-cards img {
+    position: absolute;
+    height: 88%;
+    width: auto;
+    pointer-events: none
+}
+
+.main-card h1 {
+    padding-top: 3vh;
+    font-size: 6vh;
+}
+.main-card h2 {
+    margin-top: -4vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    text-align: left;
+}
+
+
+
+.main-card-button {
+    transition: background-color 0.3s;
+    cursor: pointer;
+    position: absolute;
+    width: 30vh; 
+    height: 8vh; 
+    background: #7FCFFC; 
+    border-radius: 100px; 
+    border: 12% #1D6FCF solid;
+    bottom: 5vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-family: OpenSans;
+    font-size: 2vh;
+}
+
+.main-card-button:hover {
+    background: #4ddbff
+}
+
+.main-cards-separator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 20vh; 
+    background: #FFDD64;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.3s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.main-cards-separator:hover, .main-card:hover, .main-green-block:hover, .tech-main-card:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.main-cards-more-text {
+    font-family: OpenSans;
+}
+
+.main-cards-more-text h1 {
+    font-size:9vh; /* Размер шрифта */
+    line-height: 0.8; /* Межстрочное расстояние */
+    margin: 0; /* Убрать отступы */
+    color: #0071b3;
+    font-weight: bold;
+}
+
+.main-cards-more-text h1 a {
+    color: #00a7b3;
+    text-decoration: none;
+}
+.main-cards-more-text h1 a:active{
+    color: inherit;
+    text-decoration: none;
+}
+/*добавить кликающую ручку*/
+
+/* #################################### GREEN BLOCKS */
+
+.main-green-block {
+    margin-top: 10vh;
+    width: 100%; 
+    height: auto; 
+    background: #006A38;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+}
+
+.main-green-text-block {
+    background: #006A38;
+    font-family: OpenSans;
+    font-weight: normal;
+    text-align: center;
+    width: 50%;
+    color:#FBE188;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main-green-text-block h1 {
+    font-weight: bold;
+    margin-top: 3%;
+    font-size: 7vh;
+}
+
+.main-green-text-block h2 {
+    margin-top: -6%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: 1.5vw;
+}
+
+.main-green-text-block h3 {
+    margin-top: -3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: 3vh;
+    text-align: left;
+}
+
+.main-green-block img {
+    display: flex;
+    margin-left: auto;
+    width: 50%;
+    height: auto;
+    position: relative;
+}
+
+/* #################################### FORM */
+
+.callback-form {
+    position: relative;
+    width: 30vh;
+    height: 8vh;
+    background: transparent;
+    bottom: 7vh;
+    left: -5vh;
+    right: 0;
+    margin: 0 auto;
+    pointer-events: auto;
+    padding: 3vh;
+    align-items: center;
+}
+.callback-button {
+    font-family: OpenSans;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #000000,
+        1px 1px 0 #000000;
+    margin-top: 1vh;
+    width: 40.3vh;
+    height: 6.5vh;
+    border: 2px #1B2B28 solid;
+    cursor: pointer;
+    background: radial-gradient(circle, rgba(70,78,252,1) 0%, rgba(63,239,251,1) 100%) 0% 0% / 100% 100%, radial-gradient(circle, rgba(70,78,252,1) 0%, rgba(63,239,251,1) 100%) 100% 0% / 100% 100%;
+    background-blend-mode:saturation;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.callback-button:hover {
+    --gradient-start: radial-gradient(circle, rgba(63,239,251,1) 0%, rgba(70,78,252,1) 100%);
+    --gradient-end: radial-gradient(circle, rgba(63,239,251,1) 0%, rgba(70,78,252,1) 100%);
+}
+
+.callback-button:not(:hover) {
+    --gradient-start: radial-gradient(circle, rgba(70,78,252,1) 0%, rgba(63,239,251,1) 100%);
+    --gradient-end: radial-gradient(circle, rgba(70,78,252,1) 0%, rgba(63,239,251,1) 100%);
+}
+  
+.form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.label {
+    margin-bottom: 5px;
+    margin-right: -3vh;
+    font-family: OpenSans;
+}
+  
+.input-phone {
+    color: inherit;
+    width: 100%;
+    height: 7vh;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid currentColor;
+    padding: 0 5vh;
+}
+.input-phone::placeholder {
+    font-family: FormatSans;
+    font-weight: normal;
+    font-size: 14px;
+    color: #ffffff;
+}
+  
+.success {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+  
+
+/*########## MODAL WINDOW*/
+/* Стили для модального окна */
+.modal {
+    overflow: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: #FBE188;
+    padding: 60px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    width: 500px;
+    height: 300px;
+    border-radius: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+.modal.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+  
+.modal.hide {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Стили для кнопки закрытия */
+.closeButton {
+    background: #299ee2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: white;
+    border: none;
+    margin-bottom: 1vh;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 1001;
+    border-radius: 45px;
+    width: 20vh;
+    height: 7vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translateX(-50%);
+    transition: background 0.5s;
+    text-shadow: 
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #000000,
+        1px 1px 0 #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.closeButton:hover {
+    background:#78cdff;
+}
+
+/* Стили для затемнения под модальным окном */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+  
+.overlay.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* #################################### about SECTION */
+
+.about-hero {
+    position: relative;
+}
+
+.about-hero img{
+    width: 100%;
+}
+
+.about-hero h1 {
+    position: absolute;
+    margin-top: -90vh;
+    margin-left: 115vh;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 17vh;
+    background-image: linear-gradient(90deg, #b2e986 0%, rgb(95, 204, 128) 60%, rgb(108, 243, 187) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: 2;
+}
+.about-hero p{
+    position: absolute;
+    margin-top: -90vh;
+    margin-left: 115vh;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 17vh;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.about-hero h2{
+    position: absolute;
+    margin-top: -35vh;
+    margin-left: 7vh;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 11vh;
+    line-height: 0.9;
+    background-image: linear-gradient(90deg, #ffb17d 0%, rgb(255, 221, 107) 40%, rgb(238, 255, 82) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: 2;
+}
+.about-hero h3{
+    position: absolute;
+    margin-top: -35vh;
+    margin-left: 7vh;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 11vh;
+    line-height: 0.9;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.about-cards{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/*.about-cards .main-card {
+    align-self: center;
+    width: 95%;
+    height: auto;
+    margin-left: 5vh;
+    margin-top: -3vh;
+    text-align: center;
+    font-family: OpenSans;
+    font-weight: bold;
+    font-size: 2.7vh;
+}*/
+
+.about-main-card {
+    position: absolute;
+    margin-top: -14.9vh;
+    width: 100%; 
+    height: 295vh; 
+    background: #006A38;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.3s ease-in-out;
+    font-family: OpenSans;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color:#FBE188;
+    z-index: 5;
+}
+
+.about-main-card p {
+    padding-top: 2vh;
+    padding-left: 8vh;
+    padding-right: 8vh;
+    padding-bottom: 2vh;
+    font-size: 3vh;
+    line-height: 1.6;
+}
+
+/*##################################################*/
+
+.services-container, .benefits-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 3vw;
+    margin-top: -2vh;
+    padding-bottom: 10vh;
+    text-shadow: none;
+}
+
+.service-card, .benefit-card {
+    width: 15vw;
+    height: 35vh;
+    background: #bef1d9;
+    border-radius: 6vh;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.service-card:hover, .benefit-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.service-card h3, .benefit-card h3 {
+    font-family: 'Open Sans', sans-serif;
+    color: #006A38;
+    margin-bottom: 10px;
+    font-size: 1.2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.service-card p, .benefit-card p {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    font-size: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 0;
+}
+
+
+/*##################################################*/
+
+.about-text-background {
+    margin-top: 6vh;
+    margin-left: 35vh;
+    margin-right: 35vh;
+    margin-bottom: 10vh;
+    border: 3px solid #43AC7A; /*#00a7b3c2*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.about-main-card h2 {
+    margin-top: 0;
+}
+
+.about-sep-h1 {
+    padding: 10vh;
+}
+
+.about-cards .main-cards-separator {
+    margin-bottom: 15vh; 
+    position: relative; 
+    z-index: 6; 
+    height: 22vh;
+}
+
+.about-cards .main-cards-more-text {
+    text-align: center;
+}
+
+.about-cards .main-cards-more-text h1 {
+    margin-top: -2vh;
+    line-height: 0.9; 
+    color:#1d8ccccc; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.about-span {
+    background: linear-gradient(90deg, rgb(87, 255, 81) 0%, rgb(240, 255, 35) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    font-size: 3.2vh;
+    font-weight: bold;
+}
+
+/* #################################### tech SECTION */
+
+.tech-hero {
+    position: relative;
+}
+
+.tech-hero img{
+    max-height: 60%; /* Устанавливает максимальную высоту картинки в 200 пикселей */
+    width: 100%;
+    overflow: hidden;
+}
+
+.tech-hero h1 {
+    position: absolute;
+    margin-top: -27vh;
+    margin-left: 16vh;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 21vh;
+    background-image: linear-gradient(90deg, #d7e986 0%, rgb(108, 243, 187) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: 2;
+}
+.tech-hero p{
+    position: absolute;
+    margin-top: -27vh;
+    margin-left: 16vh;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 21vh;
+    color: transparent;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+/*
+.arrow-block {
+    width: 100%;
+    height: 20.4vh; 
+    margin-top: -0.4vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-block img {
+    margin-top: -3vh;
+    width: 20%;
+    height: auto;
+}
+
+<div class="arrow-block">
+<img src="arrow-down.png" style="padding-right: 10vh;">
+<img src="arrow-down.png">
+<img src="arrow-down.png" style="padding-left: 10vh;">
+</div>
+*/
+
+.tech-filter {
+    margin-top: -0.4vh;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-filter-box {
+    height: 90%;
+    width: 95%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10vh;
+    background-color: #bef1d9;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tech-switch {
+    margin-left: 3%;
+    width: 45%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.5vh solid black;
+    /*border: 0.5vh solid black;*/
+}
+
+.tech-switch h1 {
+    margin-top: 4.7vh;
+}
+
+.tech-switch h1 {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 7vh;
+}
+
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+  
+.switch-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 25%;
+    height: 55%;
+    background: #13d1df;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    border: 0.5vh solid black;
+    margin-left: 0;
+}
+  
+.switch-label:after {
+    content: '';
+    position: absolute;
+    top: 6%;
+    left: 3%;
+    width: 33%;
+    height: 87%;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+  
+input:checked + .switch-label {
+    background: #006A38;
+}
+  
+input:checked + .switch-label:after {
+    left: calc(100% - 3%);
+    transform: translateX(-100%);
+}
+  
+.switch-label:active:after {
+    width: 35%;
+}
+
+.tech-card-filter option {
+    font-family: OpenSans;
+    font-size: 2vh;
+    border-radius: 100px;
+}
+
+.tech-card-filter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: Roboto;
+    font-size: 6vh;
+    margin-left: 3%;
+    font-weight: bold;
+}
+
+select {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 24px;
+    list-style-type: disc;
+}
+
+#filter.filter-select {
+    appearance: none;
+    width: 100%;
+    font-family: OpenSans;
+    font-size: 2vh;
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 100px;
+    background-color: #f9f9f9;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+#filter.filter-select:hover {
+    background-color: #e9e9e9;
+    border-color: #999;
+    color: #000;
+}
+
+.tech-icons {
+    margin-left: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 1vh;
+}
+
+.tech-icons img{
+    width: 10vh;
+    height: auto;
+}
+
+.icon-button {
+    background-color: transparent;
+    width: 100%;
+    height: 13vh;
+    appearance: none;
+    cursor: pointer;
+    border: 2px solid rgba(100, 100, 100, 0.349); /* Изначально установим границу */
+    border-radius: 3vh;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    outline: none; /* Убираем стандартный outline */
+}
+
+.icon-button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Увеличенная тень при наведении */
+    transform: translateY(-2px);
+}
+
+.icon-button.selected {
+    border: 2px solid blue; /* Выделение выбранной кнопки */
+}
+
+  
+
+
+
+
+
+
+
+
+
+.tech-main-cards {
+    position: relative;
+    margin-top: 10vh;
+    width: 100%;
+}
+  
+.tech-main-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 6vh;
+    width: 85%;
+    padding-left: 10%;
+    padding-right: 5%;
+    height: 100%;
+    padding-bottom: 7vh;
+}
+  
+.tech-main-card {
+    background: #FBE188;
+    border-radius: 5vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 0;
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: center;
+    font-family: OpenSans;
+    font-size: 1.8vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 75vh;
+    height: 45vh;
+}
+
+.tech-main-card.hidden {
+    display: none;
+}
+
+.tech-card-pic {
+    margin-left: 1.5vh;
+    margin-right: 1.5vh;
+    position: relative;
+    width: 55%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid #006A38;
+    border-radius: 10vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: wheat;
+}
+
+.tech-card-pic img {
+    position: absolute;
+    height: 110%;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.tech-main-card-text {
+    width: 45%;
+    height: 100%;
+    font-family: OpenSans;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    background-color: wheat;
+}
+
+.tech1-3card {
+    width: 100%;
+    height: 20%;
+}
+
+.tech2-3card {
+    width: 85%;
+    height: 40%;
+    align-self: center;
+}
+
+.tech3-3card {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1vh;
+}
+
+/*.tech1-3card p:last-child {
+    font-weight: normal;
+    font-size: 1.4vh;
+    align-self: center;
+}
+              <p>2000 ₽/мес ● 10000 ₽</p>
+*/
+
+.tech3-3card button {
+    transition: background-color 0.3s;
+    cursor: pointer;
+    width: 70%; 
+    height: 30%; 
+    border-radius: 100px; 
+    border: 12% #1D6FCF solid;
+    font-family: OpenSans;
+    font-size: 2vh;
+}
+
+.techbuttonmore {
+    background: #7FCFFC; 
+}
+
+.techbuttonreq {
+    background: #8eebbf; 
+}
+
+#hoverup {
+    background: #7FCFFC;
+}
+
+#hoverup:hover{
+    background: #6cb0d7;
+} 
+
+.techbuttonmore:hover {
+    background: #39bedf;
+}
+
+.techbuttonreq:hover {
+    background: #54c691;
+}
+
+.tech-main-card h2 {
+    font-size: 1.9vh;
+    font-weight: normal;
+    text-align: center;
+}
+
+.tech-main-card p {
+    margin-top: -2vh;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+
+
+/*.tech-card-pic:hover .tech-card-img{
+    transform: translateX(20px);
+}*/
+
+
+/*############################################################################################## REQUEST*/
+
+.request-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(255, 238, 208);
+    font-family: Roboto;
+    font-weight: normal;
+    margin-bottom: -5vh;
+}
+
+#cart-items {
+    background-color: rgb(255, 244, 225);
+    border-radius: 0.5vh;
+    padding: 1.5vh;
+    margin-bottom: 0.2vh;
+    width: 80%;
+    border: 1px solid black;
+}
+
+.cart-img-box {
+    margin-left: 1.5vh;
+    margin-right: 1.5vh;
+    position: relative;
+    width: 10vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: rgb(255, 238, 208);
+    border-radius: 5px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-item img {
+    width: 150%;
+    height: auto;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    padding-left: 2vh;
+}
+
+.cart-item-details h2 {
+    font-size: 3vh;
+}
+
+.cart-item-details p {
+    font-size: 2.3vh;
+}
+
+.cart-summary {
+    font-size: 2.3vh;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    margin-right: 5vh;
+}
+
+.cart-item-controls button {
+    border: none;
+    color: #fff;
+    padding: 1vh 1.5vh;
+    font-size: 2.1vh;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 1vh;
+}
+
+.increase-button, .decrease-button {
+    background-color: #28a745;
+}
+
+.increase-button:hover, .decrease-button:hover {
+    background-color: #1d7e33;
+}
+
+.remove-button {
+    background-color: rgb(255, 57, 57);
+}
+
+.remove-button:hover {
+    background-color: rgb(184, 0, 0);
+}
+
+.cart-item-controls button:disabled {
+    background-color: #ccc;
+}
+
+#cart-summary {
+    background-color: rgb(255, 238, 208);
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+
+#checkout-button {
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-button:hover {
+    background-color: #218838;
+}
+
+
+/* ######################################################## FENDT-1050 */
+
+.fendtbody {
+    font-family: Roboto;
+}
+.fendtheader {
+    width: 100%;
+    height: 15vh;
+    text-align: center;
+    font-size: 4vh;
+    background-color: #bef1d9;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.4vh solid rgb(114, 114, 114);
+}
+
+.product-card {
+    background-color: wheat;
+    overflow: hidden;
+    width: 100%;
+    height: 68vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.underfendt {
+    background-color: wheat;
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -7vh;
+}
+.under-text {
+    width: 55%;
+    height: 55vh;
+    padding: 3vh;
+    margin-left: 5vh;
+    background-color: #d4f0e3;
+    font-size: 2.4vh;
+    border: 0.5vh solid rgb(121, 121, 121);
+    border-radius: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.under-text p {
+    margin: 0.7vh;
+    text-align: center;
+}
+.priceplusbuttons {
+    width: 30%;
+    height: 58vh;
+    display: flex;
+    margin-right: 8vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    border-radius: 5vh;
+    border: 0.5vh solid rgb(121, 121, 121);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.priceplusbuttons ul {
+    list-style-type: disc; 
+    text-align: left; 
+    padding-right: 5vh; 
+    padding-left: 7vh;
+}
+
+.priceplusbuttons button {
+    transition: background-color 0.3s;
+    cursor: pointer;
+    width: 70%; 
+    height: 15%; 
+    border-radius: 100px; 
+    font-family: OpenSans;
+    font-size: 2vh;
+}
+
+.fendtleasing {
+    width: 50%;
+    height: 100%;
+    border-right: 0.2vh solid black;
+}
+.fendtpurchase{
+    width: 50%;
+    height: 100%;
+    border-left: 0.2vh solid black;
+}
+
+
+.product-gallery {
+    flex: 1;
+    padding: 5vh;
+    position: relative;
+}
+
+.main-photo {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10vh;
+    border: 0.5vh solid black;
+    cursor: grab;
+}
+
+.main-photo:active {
+    cursor: grabbing;
+}
+
+.main-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-details {
+    flex: 1;
+    margin-top: 3vh;
+    font-size: 2.2vh;
+    padding-right: 10vh;
+}
+
+.product-details h1 {
+    margin-top: 0;
+}
+
+.product-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-details li {
+    margin-bottom: 10px;
+}
+
+
+/* #################################### FOOTER */
+  
+.footer {
+    background-color: #FBE188;
+    padding: 2vh 0;
+    font-family: 'Roboto', sans-serif;
+}
+  
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80vw;
+    margin: 0 auto;
+    height: 15vh;
+}
+  
+.footer-section {
+    flex-basis: 30%;
+}
+  
+.footer-title {
+    font-size: 1.2vw;
+    font-weight: 700;
+    margin-bottom: 1vh;
+}
+  
+.footer-text {
+    font-size: 1vw;
+    color: #424242;
+    margin-bottom: 0.7vh;
+}
+  
+.footer-link {
+    font-size: 1vw;
+    color: #3f6b9e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+  
+.footer-link:hover {
+    color: #000;
+}
+  
+.footer-social {
+    display: flex;
+    justify-content: flex-start;
+}
+  
+.footer-social-link img {
+    width: 3vw;
+    height: auto;
+    margin-right: 1vw;
+    margin-top: 1vh;
+    transition: opacity 0.3s ease;
+}
+.footer-social-link:hover img {
+    opacity: 0.7;
+}
+  
+.footer-bottom {
+    margin-top: 5vh;
+    text-align: center;
+}
+  
+.footer-copyright {
+    font-size: 1vw;
+    color: #666;
+    margin-bottom: 0vh;
+}
+  
+
+
+
+
+/* https://colorscheme.ru/#3151Tjyv0w0w0 
+https://cssgradient.io 
+https://habr.com/ru/companies/skillfactory/articles/551850/ 
+https://www.figma.com/file/IViqbUmsR14KCQfPuyqyJb/agrotech?type=design&node-id=2-4&mode=design&t=jV3Oy67AVrUkiltG-0 
+https://www.turbosquid.com/ru/3d-models/3d-claas-lexion-8900-tracked-combine-harvester-1982569 
+https://newgeely.ru
+https://www.claas.az/cl-pw-ru
+https://visme.co/blog/ru/цветовая-схема-веб-сайт/
+
+
+*/

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная AgroEvo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container-buttons">
+                <button class="header-button" id="order-button" onclick="navigateTo('requestAgroEvo.html')">
+                    <div style="width: 100%; background-color: transparent; position: absolute; margin-top: 1vh; min-width: 120px; min-height: auto;">Оформить заявку</div>
+                    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                    <lord-icon id = "order"
+                        src="https://cdn.lordicon.com/wzwygmng.json"
+                        trigger="hover"
+                        style="width:42px;height:42px; margin-top: -0.4vh; margin-left: 15.3vh;">
+                    </lord-icon>
+                </button>
+                <div class="agroevologo">
+                    <img style="width: 70%;" src="pics/AgroEvoLogo2_ed.png" alt="Логотип AgroEvo">
+                </div>
+                <button class="header-button" onclick="navigateTo('mainAgroEvo.html')">Главная</button>
+                <button class="header-button" onclick="navigateTo('techAgroEvo.html')">Техника</button>
+                <button class="header-button" onclick="navigateTo('aboutAgroEvo.html')">О нас</button>
+                <button class="header-button" onclick="scrollToElement('contacts-scroll');">Контакты</button>
+                <button class="header-button" onclick="scrollToElement('callback-main');">Заказать звонок
+                    <img src="pics/phone.png" alt = "Иконка трубки">
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div style="padding: 6vh;"></div>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>
+                    <span>AgroEvo -</span>
+                    <br>
+                    сельскохозяйственная
+                    <br>
+                    техника
+                    <br>
+                    <span id="changing-word" style = "line-height: 0.9; position: relative; top: -5px">нового</span>
+                    <br>
+                    поколения <span style = "line-height: 0; position: relative; left: -20px">.</span>
+                </h1>
+            </div>
+            <img src="pics/traktorVpole.jpg" alt="Техника в поле">
+            <div class="hero-gradient"></div>
+        </section>
+
+        <section class = "main-cards">
+            <div class = "main-cards-separator">
+                <div class = "main-cards-more-text">
+                    <h1>
+                        Наши флагманы
+                    </h1>
+                </div>
+            </div>
+            <div class = "main-card" style = "margin-top: 15vh; margin-bottom: 10vh; margin-left: 13vh;">
+                <h1>FENDT 1050 Vario</h1>
+                <h2>Воплощение мощи, производительности и инновационных технологий в сельскохозяйственной технике. Оснащен 12,4-литровым 6-цилиндровым двигателем. Бесступенчатая трансмиссия Vario обеспечивает плавное и эффективное распределение мощности.</h2>
+                <h2 style="padding-right: 5.5vh; margin-top: -1vh;">Если Вы ищете надежного, мощного и высокотехнологичного помощника для Ваших сельскохозяйственных работ, FENDT 1050 Vario - идеальный выбор. Этот трактор поднимет Вашу производительность на новый уровень.</h2>
+                
+                <button class = "main-card-button" onclick="navigateTo('fendt-1050.html');">Узнать больше</button>
+            </div>
+            <img src="pics/fendt_vario-11.png" style = "margin-top: -83vh; margin-left: 70vh;" alt="Fendt Vario">
+            <div class = "main-card" style = "margin-top: 25vh; margin-bottom: 10vh; margin-left: 89vh;">
+                <h1>CLAAS LEXION 8900</h1>
+                <h2 style="font-size: 3vh; margin-top: -5vh;">Этот мощный и высокопроизводительный комбайн готов покорить ваши поля. Оснащенный 24-литровым 6-цилиндровым двигателем мощностью 653 л.с., LEXION 8900 способен справиться с самыми высокими урожаями и с самой сложной погодой.</h2>
+                <h2 style="padding-left: 35vh; margin-top: -2vh; font-size: 2.75vh;">Если Вы ищете зерноуборочный комбайн, способный обеспечить рекордные показатели урожайности и эффективности, CLAAS LEXION 8900 - Ваш идеальный выбор.</h2>
+                <button class = "main-card-button" onclick="navigateTo('techAgroEvo.html');">Узнать больше</button>
+            </div>
+            <img src="pics/claas_lexion8900-12.png" style = "margin-top: -80vh; margin-left: -30vh;" alt="Claas Lexion 8900">
+            <div class = "main-cards-separator" style = "margin-top: 15vh;">
+                <div class = "main-cards-more-text">
+                    <h1>
+                        Больше техники - в <a href="techAgroEvo.html">каталоге</a>
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <section class = "callback-main" id = "callback-main">
+            <div class = "main-green-block">
+                <div class="main-green-text-block">
+                    <h1>
+                        Есть вопросы?
+                    </h1>
+                    <h2>
+                        Задайте их нам напрямую - оставьте заявку на звонок и мы перезвоним Вам в ближайшее время!
+                    </h2>
+                    <h3>
+                        <i>Внимание!</i>
+                        <br>
+                        Форма является демонстрационным вариантом для моего курсового проекта, поэтому обратный звонок (вероятно) не поступит.
+                    </h3>
+                    <div class="callback-form">
+                        <form class="form">
+                            <label for="phone" class="label">Введите Ваш номер телефона:</label>
+                            <input type="tel" id="phone" class="input-phone" placeholder="+7(___)___-__-__">
+                            <button type="submit" class="callback-button" onclick="Callback();">Оставить заявку</button>
+                        </form>
+                    </div>
+                    
+                </div>
+                <img src = "pics/callback-card.jpg" alt = "callback-card">
+            </div>
+        </section>
+
+        <section class="contacts">
+            <div class="main-green-block" id = "contacts-scroll">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A694e7276907113d49a9eecc1aa993c7aeef47d04b7cd45b15517947c49253cc0&amp;width=930&amp;height=700&amp;lang=ru_RU&amp;scroll=true"></script>
+                <div class="main-green-text-block" style="margin-left: auto; line-height: 1.5;">
+                    <h1 style="font-size: 6vh; margin-top: 2%;">
+                        Не можете ждать?
+                    </h1>
+                    <h2 style="text-align: left;">
+                        Приходите в наш центральный офис по адресу:<br> г.Москва, ул.Правды, 26!
+                        <br> 
+                        Наши специалисты в короткий срок проведут любую необходимую консультацию.
+                        <br>
+                        Время работы офиса: 09:00 - 18:00 (Ежедневно)
+                    </h2>
+                    <h3>
+                        Уточните график работы необходимого Вам специалиста по телефонам:
+                        <br>
+                        +7 (495) 455-55-55 (доб.3)
+                        <br>
+                        +7 (495) 544-44-44
+                        <br>
+                        <i>(Телефоны придуманы из головы, все совпадения с реальностью случайны.)</i>
+                        <br>
+                        <i>Внимание!</i> По номерам не консультируют по наличию техники, при необходимости, пожалуйста, оставьте <a onclick = "scrollToElement('callback-main')" style="color: rgba(63,239,251,1); cursor: pointer;">заявку</a>.
+                    </h3>
+                </div>
+            </div>
+        </section>
+        <div style="margin-top: 10vh;"></div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">О нас</h3>
+            <p class="footer-text">Мы предоставляем лучшие сельскохозяйственные машины и оборудование с гарантией качества и надежности.</p>
+            <a href="aboutAgroEvo.html" class="footer-link">Узнать больше</a>
+          </div>
+          <div class="footer-section">
+            <h3 class="footer-title">Контакты</h3>
+            <p class="footer-text">г.Москва, ул.Правды, 26<br>+7 (495) 455-55-55 (доб.3)<br>+7 (495) 544-44-44</p>
+            <button style="all: unset; cursor: pointer; font-size: 1vw; font-family: 'Roboto', sans-serif; color: #3f6b9e;" onclick="scrollToElement('contacts-scroll');">Подробнее</button>
+          </div>
+          <div class="footer-section">
+            <h3 class="footer-title">Следите за нами в соцсетях:</h3>
+            <div class="footer-social"> 
+                <a href="https://vk.com" class="footer-social-link"> 
+                    <img src="pics/VK-icon.png" alt="VK" width="30" height="30"> 
+                </a> 
+                <a href="https://youtube.com" class="footer-social-link"> 
+                    <img src="pics/YouTube-icon.png" alt="YouTube" width="30" height="30"> 
+                </a> 
+                <a href="https://telegram.org" class="footer-social-link"> 
+                    <img src="pics/Telegram-icon.png" alt="Telegram" width="30" height="30"> 
+                </a> 
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">&copy; 2024 AgroEvo. Все права защищены.</p>
+        </div>
+      </footer>
+      
+</body>
+</html>
